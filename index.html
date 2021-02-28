@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Style CSS Class</title>
+
+  <link rel="stylesheet" href="./style.css" />
+
+</head>
+<body>
+  
+  <main>
+    <div class="header">
+      <div class="header__body">
+        <h1 class="header__title">
+          CSS
+          <span class="header__subtitle">Cheat Sheet</span>
+        </h1>
+      </div>
+      <div class="header__decoration"></div>
+    </div>
+    <div class="intro">
+      <p>
+        Đây là tài liệu hướng dẫn sử dụng và xây dựng hệ thống class CSS dành riêng cho hệ sinh thái dự án. Tài liệu có đính kèm theo file <a href="#">main.css</a> chỉ cần đổi tên hoặc dẫn link là có thể sử dụng.
+      </p>
+      <p>
+        Hệ thống xây dựng Class CSS version 1.1 ra mắt ngày 28/02/2021. Bản cập nhật thường xuyên sẽ được áp dụng!
+      </p>
+    </div>
+    <div class="t-page-layout">
+      <a id="page-navigation"></a>
+      <aside class="t-page-layout__wrap">
+        <nav class="t-main-nav" id="main-nav" aria-label="main">
+          <ul class="t-main-nav__list">
+            <li class="t-main-nav__item">
+              <a class="t-main-nav__link" href="#layout-blocks">Layout Websites</a>
+              <ul class="t-main-nav__list t-main-nav__list--second">
+                <li class="t-main-nav__item"><a class="t-main-nav__link" href="#websites">Tổng thể</a></li>
+                <li class="t-main-nav__item"><a class="t-main-nav__link" href="#card">Card</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <label for="show-html" class="t-checkbox">
+          <input class="t-checkbox__input" type="checkbox" id="show-html" checked="true">
+          <svg class="t-checkbox__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22">
+            <rect width="21" height="21" x=".5" y=".5" fill="#FFF" stroke="#006F94" rx="3" />
+            <path class="tick" stroke="#f09" fill="none" stroke-width="3" d="M4 9l7 6L27-2"></path>
+          </svg>
+          <span class="t-checkbox__label">Show HTML</span>
+        </label>
+      </aside>
+      <main class="t-page-layout__main" id="main">
+        <div class="t-section">
+          <h2 class="t-section__headline" id="standard-blocks">Standard Blocks</h2>
+          <p class="t-section__intro">
+            Các hướng dẫn dưới đây bao gồm thông tin tên class các cấu trúc hiển thị như hình. Tiêu chuẩn đặt tên 1 class sẽ có quy tắc sử dụng chung. Ví dụ: <code>card__header</code>, <code>card__footer</code> hoặc <code>list__item</code>.
+          </p>
+          <article class="t-card">
+            <div class="t-card__header">
+              <a class="t-anchor" id="websites"></a>
+              <h3 class="t-card__headline" omit>Websites<a href="#page-navigation" class="t-card__totop"><span class="visuallyhidden">back to navigation</span></a></h3>
+            </div>
+            <div class="t-card__body">
+              <div class="class-highlight">
+                <div class="Websites">
+                  <div class="header"></div>
+                  <div class="wrap">
+                    <aside>.col-left</aside>
+                    <div>.col-right</div>
+                  </div>
+                  <div class="wrap wrap--reverse">
+                    <aside>.col-right</aside>
+                    <div>.col-left</div>
+                  </div>
+                </div> 
+              </div>
+              <pre><code>&lt;div class=&#34;sidebar&#34;&gt;
+                  &lt;aside&gt;&lt;/aside&gt;
+                  &lt;div&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                
+                &lt;div class=&#34;sidebar sidebar--reverse&#34;&gt;
+                  &lt;aside&gt;&lt;/aside&gt;
+                  &lt;div&gt;&lt;/div&gt;
+                &lt;/div&gt;</code></pre>
+            </div>
+            <div class="t-card__aside">
+              <div class="t-note">
+                <h3 class="t-note__title">Chú ý:</h3>
+                <p>Đây là websites tổng thể nhìn chung về các bố cục bao gồm các class .header, .wrap, .col-left, .col-right và đảo ngược lại.</p>
+              </div>
+            </div>
+          </article>
+          <article class="t-card">
+            <div class="t-card__header">
+              <a class="t-anchor" id="card"></a>
+              <h3 class="t-card__headline" omit>Card<a href="#page-navigation" class="t-card__totop"><span class="visuallyhidden">back to navigation</span></a></h3>
+            </div>
+            <div class="t-card__body">
+              <div class="class-highlight">
+                <div class="col-left">
+                  <div class="card">
+                    <aside class="card-left">IMG</aside>
+                    <div class="card-right">Content</div>
+                  </div>
+                </div> 
+              </div>
+              <pre><code>&lt;div class=&#34;sidebar&#34;&gt;
+                  &lt;aside&gt;&lt;/aside&gt;
+                  &lt;div&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                
+                &lt;div class=&#34;sidebar sidebar--reverse&#34;&gt;
+                  &lt;aside&gt;&lt;/aside&gt;
+                  &lt;div&gt;&lt;/div&gt;
+                &lt;/div&gt;</code></pre>
+            </div>
+            <div class="t-card__aside">
+              <div class="t-note">
+                <h3 class="t-note__title">Chú ý:</h3>
+                <p>Nội dung bên trong của một thẻ card với bố cục chia làm 2 phần card-left và card-right.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <footer class="footer" aria-label="footer">
+          <div class="footer__body">
+            Made with
+            <span class="footer__heart">💜</span>
+            in
+            Kie
+          </div>
+        </footer>
+
+      </main>
+
+</body>
+</html>
